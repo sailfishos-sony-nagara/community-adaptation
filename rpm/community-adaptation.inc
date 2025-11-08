@@ -24,11 +24,7 @@ touch $RPM_BUILD_ROOT/init_disable_telnet
 mkdir -p $RPM_BUILD_ROOT/%{_datadir}/community-adaptation/
 
 %if "%{flavour}" != "localbuild"
-sed -e "s|@FLAVOUR@|%{flavour}|g" \
-%if "%{flavour}" != "testing"
-    -e "s|sailfishos_%%(releaseMajorMinor)|sailfish_latest_%%(arch)|g" \
-%endif
-    adaptation-community.ini.in > $RPM_BUILD_ROOT/%{_datadir}/community-adaptation/adaptation-community.ini.in
+    cp adaptation-community.%{flavour}.ini.in $RPM_BUILD_ROOT/%{_datadir}/community-adaptation/adaptation-community.ini.in
 %else
     touch $RPM_BUILD_ROOT/%{_datadir}/community-adaptation/adaptation-community.ini.in
 %endif
