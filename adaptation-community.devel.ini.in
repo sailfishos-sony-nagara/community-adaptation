@@ -4,4 +4,4 @@ pattern = Feature community adaptation
 description = Enable ssu for community ports
 
 [repositories]
-adaptation-community = https://repo.sailfishos.org/obs/nemo:/devel:/hw:/sony:/nagara/sailfishos_latest_%(arch)/
+adaptation-community = https://repo.sailfishos.org/obs/nemo:/devel:/hw:/sony:/nagara/sailfish_latest_%(arch)/
